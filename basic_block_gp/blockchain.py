@@ -95,6 +95,7 @@ class Blockchain(object):
         while not self.valid_proof(block_string, proof):
             proof += 1
         guess = f'{block_string}{proof}'.encode()
+        #  WHAT IS HAPPENING HERE ^^^^^^^^^^^^^^^^^^^
         guess_hash = hashlib.sha256(guess).hexdigest()
         return proof
 
