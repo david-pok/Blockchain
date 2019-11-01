@@ -30,9 +30,9 @@ export default class Home extends Component {
           if (name === recipient || name === sender) {
             temp_transactions.push(transacData);
             if (name === recipient) {
-              this.setState({ balance: +1 });
+              this.setState({ balance: this.state.balance+1 });
             } else if (name === sender) {
-              this.setState({ balance: -1 });
+              this.setState({ balance: this.state.balance-1 });
             }
           }
         }
